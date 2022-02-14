@@ -39,10 +39,10 @@ Ketika perintah dibaca dari tty, interpreter dikatakan dalam mode interaktif. Da
 Secara default, file sumber Python diperlakukan sebagai dikodekan dalam UTF-8. Dalam pengkodean itu, karakter dari sebagian besar bahasa di dunia dapat digunakan secara bersamaan dalam literal string, pengidentifikasi dan komentar - meskipun pustaka standar hanya menggunakan karakter ASCII untuk pengidentifikasi, sebuah konvensi yang harus diikuti oleh kode portabel apa pun. Untuk menampilkan semua karakter ini dengan benar, editor Anda harus mengenali bahwa file tersebut adalah UTF-8, dan harus menggunakan font yang mendukung semua karakter dalam file.
 
 Untuk mendeklarasikan pengkodean selain yang default, baris komentar khusus harus ditambahkan sebagai baris pertama file. Sintaksnya adalah sebagai berikut:
-# -*- coding: encoding -*-    
+-*- coding: encoding -*-    
 di mana pengkodean adalah salah satu codecs valid yang didukung oleh Python.
 Misalnya, untuk menyatakan bahwa pengkodean Windows-1252 akan digunakan, baris pertama file kode sumber Anda harus:
-# -*- coding: cp1252 -*-
+-*- coding: cp1252 -*-
 Satu pengecualian untuk aturan baris pertama adalah ketika kode sumber dimulai dengan garis "shebang" UNIX. Dalam hal ini, deklarasi pengkodean harus ditambahkan sebagai baris kedua file.
 
 
