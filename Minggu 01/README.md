@@ -67,8 +67,8 @@ Python tahu sejumlah tipe data majemuk, yang digunakan untuk mengelompokkan nila
 Python dapat juga digunakan untuk tugas yang lebih rumit daripada menambahkan dua dan dua Bersama – sama, misalnya dapat menulis sub-urutan awal dari seri Fibonaci. sebagai berikut:
 
 >>>
->>> # Fibonacci series:
-... # the sum of two elements defines the next
+>>>  Fibonacci series:
+... the sum of two elements defines the next
 ... a, b = 0, 1
 >>> while a < 10:
 ...     print(a)
