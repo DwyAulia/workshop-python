@@ -39,7 +39,7 @@ Ketika perintah dibaca dari tty, interpreter dikatakan dalam mode interaktif. Da
 Secara default, file sumber Python diperlakukan sebagai dikodekan dalam UTF-8. Dalam pengkodean itu, karakter dari sebagian besar bahasa di dunia dapat digunakan secara bersamaan dalam literal string, pengidentifikasi dan komentar - meskipun pustaka standar hanya menggunakan karakter ASCII untuk pengidentifikasi, sebuah konvensi yang harus diikuti oleh kode portabel apa pun. Untuk menampilkan semua karakter ini dengan benar, editor Anda harus mengenali bahwa file tersebut adalah UTF-8, dan harus menggunakan font yang mendukung semua karakter dalam file.
 
 Untuk mendeklarasikan pengkodean selain yang default, baris komentar khusus harus ditambahkan sebagai baris pertama file. Sintaksnya adalah sebagai berikut:
-# -*- coding: encoding -*-
+# -*- coding: encoding -*-    
 di mana pengkodean adalah salah satu codecs valid yang didukung oleh Python.
 Misalnya, untuk menyatakan bahwa pengkodean Windows-1252 akan digunakan, baris pertama file kode sumber Anda harus:
 # -*- coding: cp1252 -*-
@@ -83,6 +83,7 @@ Python dapat juga digunakan untuk tugas yang lebih rumit daripada menambahkan du
 8
 
 Contoh ini memperkenalkan beberapa fitur baru.
+
 •	Baris pertama berisi beberapa tugas: variabel a dan b secara bersamaan mendapatkan nilai baru 0 dan 1. Pada baris terakhir ini digunakan lagi, menunjukkan bahwa ekspresi di sisi kanan semua dievaluasi terlebih dahulu sebelum salah satu tugas terjadi. Ekspresi sisi kanan dievaluasi dari kiri ke kanan.
 •	Loop while dijalankan selama kondisi (di sini: a < 10) tetap benar. Di Python, seperti di C, nilai integer non-nol adalah benar; Nol adalah palsu. Kondisi ini mungkin juga merupakan nilai string atau daftar, sebenarnya urutan apa pun; apa pun dengan panjang non-nol adalah benar, urutan kosong salah. Tes yang digunakan dalam contoh adalah perbandingan sederhana. Operator perbandingan standar ditulis sama seperti dalam C: < (kurang dari), > (lebih besar dari), == (sama dengan), <= (kurang dari atau sama dengan), >= (lebih besar dari atau sama dengan) dan != (tidak sama dengan).
 •	Tubuh loop menjorok: lekukan adalah cara Python mengelompokkan pernyataan. Pada prompt interaktif, Anda harus mengetik tab atau spasi untuk setiap baris indentasi. Dalam praktiknya Anda akan menyiapkan input yang lebih rumit untuk Python dengan editor teks; semua editor teks yang layak memiliki fasilitas auto-indentasi. Ketika pernyataan majemuk dimasukkan secara interaktif, itu harus diikuti oleh garis kosong untuk menunjukkan penyelesaian (karena parser tidak dapat menebak ketika Anda telah 
