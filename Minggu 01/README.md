@@ -17,6 +17,7 @@ bahasa ini dinamai menurut acara BBC "Monty Python's Flying Circus" dan tidak ad
 BAB 2 Menggunakan Python Interpreter
 
 2.1. Memanggil Penerjemah
+
 Interpreter Python biasanya diinstal sebagai /usr/local/bin/python3.10 pada mesin-mesin yang tersedia; menempatkan /usr/local/bin di jalur pencarian shell Unix Anda memungkinkan untuk memulainya dengan mengetikkan perintah "python3.10" (tanpa tanda petik) ke shell.  Karena pilihan direktori tempat penerjemah tinggal adalah opsi instalasi, tempat lain dimungkinkan; periksa dengan guru Python lokal atau administrator sistem Anda. (Misalnya, /usr/local/python adalah lokasi alternatif yang populer.)
 
 Pada mesin Windows tempat Anda menginstal Python dari Microsoft Store, perintah python3.10 akan tersedia. Jika Anda memiliki peluncur py.exe diinstal, Anda dapat menggunakan perintah py. Lihat Excursus: Mengatur variabel lingkungan untuk cara lain meluncurkan Python. Mengetik karakter end-of-file (Control-D di Unix, Control-Z pada Windows) pada prompt utama menyebabkan interpreter keluar dengan status keluar nol. Jika itu tidak berhasil, Anda dapat keluar dari penerjemah dengan mengetikkan perintah berikut: quit().
@@ -32,10 +33,13 @@ Ketika file skrip digunakan, terkadang berguna untuk dapat menjalankan skrip dan
 Ketika diketahui oleh penerjemah, nama skrip dan argumen tambahan setelahnya diubah menjadi daftar string dan ditugaskan ke variabel argv dalam modul sys. Anda dapat mengakses daftar ini dengan mengeksekusi import sys. Panjang daftar setidaknya satu; ketika tidak ada skrip dan tidak ada argumen yang diberikan, sys.argv[0] adalah string kosong. Ketika nama skrip diberikan sebagai '-' (yang berarti input standar), sys.argv[0] diatur ke '-'. Ketika perintah -c digunakan, sys.argv[0] diatur ke '-c'. Ketika modul -m digunakan, sys.argv[0] ke nama lengkap modul yang terletak. Opsi yang ditemukan setelah perintah -c atau modul -m tidak dikonsumsi oleh pemrosesan opsi interpreter Python tetapi dibiarkan di sys.argv untuk ditangani oleh perintah atau modul.
 
 2.1.2. interactive mode
+
 Ketika perintah dibaca dari tty, interpreter dikatakan dalam mode interaktif. Dalam mode ini meminta perintah berikutnya dengan prompt utama, biasanya tiga tanda yang lebih besar dari (>>>); untuk garis kelanjutan yang dimintanya dengan prompt sekunder, secara default tiga titik (...). Penerjemah mencetak pesan selamat datang yang menyatakan nomor versi dan pemberitahuan hak cipta sebelum mencetak prompt pertama
+
 2.2. The Interpreter and Its Environment
 
 2.2.1. Source code encoding
+
 Secara default, file sumber Python diperlakukan sebagai dikodekan dalam UTF-8. Dalam pengkodean itu, karakter dari sebagian besar bahasa di dunia dapat digunakan secara bersamaan dalam literal string, pengidentifikasi dan komentar - meskipun pustaka standar hanya menggunakan karakter ASCII untuk pengidentifikasi, sebuah konvensi yang harus diikuti oleh kode portabel apa pun. Untuk menampilkan semua karakter ini dengan benar, editor Anda harus mengenali bahwa file tersebut adalah UTF-8, dan harus menggunakan font yang mendukung semua karakter dalam file.
 
 Untuk mendeklarasikan pengkodean selain yang default, baris komentar khusus harus ditambahkan sebagai baris pertama file. Sintaksnya adalah sebagai berikut:
@@ -54,16 +58,20 @@ Komentar di Python dimulai dengan karakter hash, #, dan meluas ke akhir baris fi
 3.1. Menggunakan Python sebagai Kalkulator
 
 3.1.1 Angka
+
 Interpreter bertindak sebagai kalkulator sederhana, dengan mengetik ekspresi di dalamnya dan itu akan menulis nilainya. Sintaks ekspresi sangat mudah: operator +, -, * dan / bekerja seperti di kebanyakan bahasa lain (misalnya, Pascal atau C); tanda kurung (()) dapat digunakan untuk pengelompokan. 
 
 3.1.2. String 
+
 Selain angka, Python juga dapat memanipulasi string, yang dapat diekspresikan dalam beberapa cara. Mereka dapat dilampirkan dalam tanda kutip tunggal ('...') atau kutipan ganda ("...") dengan hasil yang sama 2. \ dapat digunakan untuk menghindari kutipan. 
 Dalam interpreter interaktif, string output tertutup dalam tanda kutip dan karakter khusus lolos dengan backslashes. Meskipun ini kadang-kadang mungkin terlihat berbeda dari input (kutipan melampirkan bisa berubah), dua string yang setara. String diapit dalam tanda kutip ganda jika string berisi satu kutipan dan tidak ada kutipan ganda, jika tidak, itu tertutup dalam tanda kutip tunggal. Fungsi print() menghasilkan output yang lebih mudah dibaca, dengan menghilangkan kutipan penutup dan dengan mencetak karakter yang lolos dan khusus.
 
 3.1.3 Daftar
+
 Python tahu sejumlah tipe data majemuk, yang digunakan untuk mengelompokkan nilai lainnya. Yang paling serbaguna adalah daftar, yang dapat ditulis sebagai daftar nilai yang dipisahkan koma (item) antara tanda kurung siku. Daftar mungkin berisi item dari berbagai jenis, tetapi biasanya semua item memiliki jenis yang sama.
 
 3.2 Firs Steps Towards Programming
+
 Python dapat juga digunakan untuk tugas yang lebih rumit daripada menambahkan dua dan dua Bersama – sama, misalnya dapat menulis sub-urutan awal dari seri Fibonaci. sebagai berikut:
 
 >>>
